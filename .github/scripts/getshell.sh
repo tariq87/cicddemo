@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $SHELL
+ls -l /etc
