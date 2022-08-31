@@ -35,8 +35,12 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           
+      - name: Set env variable
+        env:
+           USERNAME: superuser
+           PASSWORD: Password
+           
       - name: Run build script
         run: ./.github/scripts/getshell.sh
-        shell: bash
-        
+        shell: bash  
        
