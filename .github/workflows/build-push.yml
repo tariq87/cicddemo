@@ -8,9 +8,6 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    env:
-       USERNAME: superuser
-       PASSWORD: Password
     steps:
       -
         name: Checkout
@@ -38,7 +35,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
            
-      - name: Run build script
-        run: ./.github/scripts/getshell.sh
-        shell: bash  
        
