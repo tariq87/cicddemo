@@ -1,9 +1,9 @@
-name: Check current working directory
+name: List files
 on: [push]
 jobs:
   checkdir:
     runs-on:
       labels: runner1
     steps:
-      - name: print cwd
-        run: pwd
+      - name: print files
+        run: ls -lrt
